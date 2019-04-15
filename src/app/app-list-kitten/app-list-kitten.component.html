@@ -1,0 +1,18 @@
+<div *ngFor="let userCat of makeCatService.userCats; let i = index">
+  <span
+    [innerHTML]="userCat.name"
+  ></span>
+<br>
+  <span
+    [innerHTML]="userCat.race"
+  ></span>
+  <br>
+  <span
+   [innerHTML]="userCat.bd"
+  ></span>
+  <br>
+  <img
+    src= {{userCat.url}}
+  />
+
+</div>
