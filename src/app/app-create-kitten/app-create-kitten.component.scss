@@ -12,4 +12,14 @@
 .formTitle {
   margin-top: 15px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.add {
+  margin-left: 35px;
 }

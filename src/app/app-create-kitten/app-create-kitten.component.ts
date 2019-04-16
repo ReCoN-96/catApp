@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MakeCatService } from '../make-cat.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -16,5 +17,4 @@ export class AppCreateKittenComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

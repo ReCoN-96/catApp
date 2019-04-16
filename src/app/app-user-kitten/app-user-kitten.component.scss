@@ -1,0 +1,12 @@
+span {
+  visibility: hidden;
+}
+
+.box:hover span {
+  visibility: visible;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}

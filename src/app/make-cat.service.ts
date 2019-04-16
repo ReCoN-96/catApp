@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MakeCatService {
+  listenCats = [];
   userCats = [];
   nameCat: string;
   raceCat: string;
@@ -13,8 +15,8 @@ export class MakeCatService {
 
   constructor() { }
 
-  addToMarket($event) {
-    $event.preventDefault();
+
+  addToMarket(form: NgForm) {
 
     const userCat = {
       name: this.nameCat,
@@ -28,6 +30,15 @@ export class MakeCatService {
     this.raceCat = '';
     this.bdCat = '';
     this.urlCat = '';
+  }
+
+  addToAdopted($event, i) {
+    $event.preventDefault();
+    this.listenCats.push(this.userCats[i]);
+
+    const deletedElement = this.userCats.filter(newUserCats => newUserCats !== this.userCats[i]);
+    this.userCats = deletedElement;
+
   }
 }
 

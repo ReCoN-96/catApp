@@ -1,0 +1,23 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.formOne {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+span {
+  visibility: hidden;
+}
+
+.box:hover span {
+  visibility: visible;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}

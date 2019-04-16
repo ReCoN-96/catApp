@@ -1,3 +1,32 @@
-<p>
-  app-user-kitten works!
-</p>
+<h2>chat adopté !</h2>
+<div class="box" *ngFor="let listencat of makeCatService.listenCats; let i = index">
+  <img
+    src= {{listencat.url}}
+  />
+  <span>
+      <strong>Nom du chat :
+      </strong>
+      <span
+        [innerHTML]="listencat.name"
+      ></span>
+    </span>
+  <br>
+
+  <span>
+    <strong>Race du chat :
+    </strong>
+      <span
+        [innerHTML]="listencat.race"
+      ></span>
+  </span>
+    <br>
+
+    <span>
+      <strong >Date de naissance du chat :
+      </strong>
+      <span
+      [innerHTML]="listencat.bd"
+      ></span>
+    </span>
+    <br>
+</div>

@@ -1,18 +1,48 @@
-<div *ngFor="let userCat of makeCatService.userCats; let i = index">
-  <span
-    [innerHTML]="userCat.name"
-  ></span>
-<br>
-  <span
-    [innerHTML]="userCat.race"
-  ></span>
-  <br>
-  <span
-   [innerHTML]="userCat.bd"
-  ></span>
-  <br>
-  <img
-    src= {{userCat.url}}
-  />
+<div class="form">
+  <div>
+    <h2>chat disponible</h2>
+    <div class="box" *ngFor="let userCat of makeCatService.userCats; let i = index">
+        <img
+        src= {{userCat.url}}
+      />
+      <a
+      href
+      class="validate button is-primary is-small"
+      (click)="makeCatService.addToAdopted($event, i)"
+    >adopter</a>
+
+      <span>
+        <strong>Nom du chat :
+        </strong>
+        <span
+          [innerHTML]="userCat.name"
+        ></span>
+      </span>
+    <br>
+
+    <span>
+      <strong>Race du chat :
+      </strong>
+        <span
+          [innerHTML]="userCat.race"
+        ></span>
+    </span>
+      <br>
+
+      <span>
+        <strong >Date de naissance du chat :
+        </strong>
+        <span
+        [innerHTML]="userCat.bd"
+        ></span>
+      </span>
+      <br>
+
+    </div>
+  </div>
+
+  <div>
+    <app-app-user-kitten></app-app-user-kitten>
+  </div>
 
 </div>
